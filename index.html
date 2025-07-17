@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <title>Botwala - Smart Business Automation by Decentra Innovation Lab</title>
+<!-- Essential Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Automate your business with Botwala, an AI-powered smart automation platform by Decentra Innovation Lab. Transform your workflow today.">
+<meta name="keywords" content="botwala, business automation, AI bots, workflow automation, bulk whatsapp, decentrala, Decentra Innovation Lab, meta verified, meta official api, smart bots">
+<meta name="author" content="Decentra Innovation Lab Pvt. Ltd.">
+<link rel="canonical" href="https://botwala.in/">
+
+<!-- Favicon -->
+<link rel="icon" href="https://botwala.in/images/botwala-square.png" type="image/png">
+
+<!-- Open Graph for Facebook, LinkedIn -->
+<meta property="og:title" content="Botwala - Smart Business Automation Platform">
+<meta property="og:description" content="Automate and grow your business with AI-powered bots. Discover the power of Botwala.">
+<meta property="og:image" content="https://botwala.in/images/botwala-social-banner.png"> <!-- Add banner later -->
+<meta property="og:url" content="https://botwala.in/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Botwala - Smart Business Automation">
+<meta name="twitter:description" content="AI bots and automation tools by Decentra Innovation Lab.">
+<meta name="twitter:image" content="https://botwala.in/images/botwala-social-banner.png">
+<meta name="twitter:site" content="@Botwalaofficial">
+
+<!-- Schema Markup (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Botwala",
+  "url": "https://botwala.in",
+  "logo": "https://botwala.in/images/botwala-light-logo.png",
+  "sameAs": [
+    "https://twitter.com/Botwalaofficial",
+    "https://facebook.com/Botwalaofficial",
+    "https://youtube.com/@Botwalaofficial"
+  ]
+}
+</script>
+
+  <link rel="icon" type="image/png" href="https://i.ibb.co/ms7p007/botwala-square.png" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+:root {
+  --neon-green: #39ff14;
+  --electric-blue: #00ffff;
+  --dark-bg: #010314;
+  --light-bg: #ffffff;
+  --light-text: #0f0f0f;
+  --dark-text: #ffffff;
+  --light-button-bg: var(--electric-blue);
+  --light-button-text: #000000;
+  --dark-button-bg: var(--neon-green);
+  --dark-button-text: #000000;
+  --menu-bg: #ffffff;
+  --menu-text: #1a1a1a;
+  --button-bg: #facc15;
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --hero-light-bg: radial-gradient(circle at 50% 150%, var(--electric-blue) 0%, transparent 80%);
+  --hero-dark-bg: radial-gradient(circle at 50% -50%, var(--neon-green) 0%, transparent 80%);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --button-bg: var(--dark-button-bg);
+  --button-text: var(--dark-button-text);
+  --hero-bg: var(--hero-dark-bg);
+  --border-color: var(--neon-green);
+  --menu-bg: var(--neon-green);
+  --menu-text: #000000;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--light-bg);
+  --text-color: var(--light-text);
+  --button-bg: var(--light-button-bg);
+  --button-text: var(--light-button-text);
+  --hero-bg: var(--hero-light-bg);
+  --border-color: var(--electric-blue);
+  --menu-bg: var(--electric-blue);
+  --menu-text: #000000;
+}
+
+.thematic-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--border-color);
+}
+
+/* Logo control */
+.logo-dark, .logo-light {
+  display: none;
+}
+[data-theme="light"] .logo-light {
+  display: block;
+}
+[data-theme="dark"] .logo-dark {
+  display: block;
+}
+
+/* Sticky header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg-color);
+}
+
+/* Body styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Hero text */
+.hero-text {
+  background: var(--hero-bg);
+  color: var(--text-color);
+}
+
+/* Glow button */
+.glow-button {
+  background-color: var(--button-text);
+  color: var(--button-bg);
+  box-shadow: 0 0 10px var(--button-text), 0 0 20px var(--button-text);
+  transition: all 0.3s ease;
+}
+
+/* Tag button active */
+.tag-btn.active {
+  border: 2px solid var(--button-bg);
+  box-shadow: 0 0 10px var(--button-bg);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Triangle button */
+.triangle-button {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid var(--button-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px var(--button-bg), 0 0 20px var(--button-bg);
+}
+.triangle-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--button-bg), 0 0 30px var(--button-bg);
+}
+
+/* WhatsApp button glow */
+.glow-whatsapp-btn {
+  background-color: var(--button-bg);
+  box-shadow: 0 0 10px var(--button-bg), 0 0 20px var(--button-bg);
+  transition: all 0.3s ease;
+}
+.glow-whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--button-bg), 0 0 30px var(--button-bg);
+}
+
+/* Tooltip */
+.tooltip-text {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+/* Mobile menu theme background and text */
+#mobileMenu {
+  background-color: var(--menu-bg);
+  color: var(--menu-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*new CHanges*/
+
+
+  </style>
+</head>
+<body class="min-h-screen font-sans">
+
+<header class="sticky top-0 z-50 flex justify-between items-center px-6 py-4 bg-[var(--bg-color)] text-[var(--text-color)] sm:flex">
+
+  <!-- Logo -->
+<div class="flex items-center gap-3">
+  <img src="/images/botwala-dark-logo.png" alt="botwala Dark Logo" class="h-10 logo-dark hidden dark:block">
+  <img src="/images/botwala-light-logo.png" alt="botwala Light Logo" class="h-10 logo-light block dark:hidden">
+</div>
+
+
+  <!-- Theme Toggle (Centered) -->
+  <button id="themeToggle" class="border border-gray-500 rounded text-sm px-3 py-1 hover:text-[var(--button-bg)]">
+    🔆
+  </button>
+
+  <!-- Hamburger (mobile only) -->
+  <button id="menuToggle" class="sm:hidden text-3xl z-50 focus:outline-none">
+    ☰
+  </button>
+
+<!-- ✅ Desktop Nav Menu -->
+<nav id="desktopMenu" class="hidden sm:flex gap-6 items-center ml-6 relative">
+  <a href="#" class="text-lg font-medium hover:text-[var(--button-bg)]">Home</a>
+  <a href="#services" class="text-lg font-medium hover:text-[var(--button-bg)]">Services</a>
+  <a href="#pricing" class="text-lg font-medium hover:text-[var(--button-bg)]">Pricing</a>
+  <a href="#blog" class="text-lg font-medium hover:text-[var(--button-bg)]">Blog</a>
+  <a href="#contact" class="text-lg font-medium hover:text-[var(--button-bg)]">Contact</a>
+  <a href="https://wabb.botwala.in/auth/login" class="text-lg font-medium hover:text-[var(--button-bg)]">Login</a>
+</nav>
+
+<!-- ✅ Mobile Nav Menu -->
+<nav id="mobileMenu" class="fixed top-0 left-0 w-64 h-full transform -translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col space-y-6 p-6 sm:hidden rounded-r-xl bg-[var(--menu-bg)] text-[var(--menu-text)] border-r border-white/10">
+  <a href="#" class="menu-link text-lg font-semibold hover:text-[var(--button-bg)]">Home</a>
+  <a href="#services" class="menu-link text-lg font-semibold hover:text-[var(--button-bg)]">Services</a>
+  <a href="#pricing" class="menu-link text-lg font-semibold hover:text-[var(--button-bg)]">Pricing</a>
+  <a href="#blog" class="menu-link text-lg font-semibold hover:text-[var(--button-bg)]">Blog</a>
+  <a href="#contact" class="menu-link text-lg font-semibold hover:text-[var(--button-bg)]">Contact</a>
+  <a href="https://wabb.botwala.in/auth/login" class="menu-link text-lg font-semibold hover:text-[var(--button-bg)]">Login</a>
+</nav>
+
+
+</header>
+
+
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 hero-text">
+    <h1 class="text-4xl md:text-6xl font-extrabold neon-text mb-6">Bots. Business. Benefits.</h1>
+    <p class="text-lg md:text-xl mb-8">Automate your growth with Meta-verified WhatsApp bots, AI chatbots, trading bots, and business automation tools.</p>
+    <a href="#pricing" class="glow-button px-6 py-3 rounded text-lg font-semibold">Get Started</a>
+  </section>
+
+  <!-- Placeholder for Further Sections -->
+<section id="services" class="py-20 px-6 bg-[var(--bg-color)] text-[var(--text-color)]">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 neon-text">Your Bots. Your Growth.</h2>
+    <p class="mb-12 text-lg md:text-xl">Explore high-performance bots that grow your business, engage your customers, and boost conversions—24/7.</p>
+
+    <div class="grid gap-10 md:grid-cols-2">
+      <!-- WhatsApp Marketing Bot -->
+      <div class="p-6 rounded-xl shadow-lg border border-[var(--border-color)] bg-opacity-5 backdrop-blur-lg">
+        <h3 class="text-2xl font-semibold mb-2">📢 WhatsApp Marketing Bot</h3>
+        <p class="mb-4">Send bulk promotional content directly via Meta-verified API. Engage thousands instantly at minimal cost.</p>
+        <span class="inline-block bg-[var(--button-bg)] text-[var(--button-text)] px-4 py-2 rounded font-bold text-sm">Meta Verified</span>
+      </div>
+
+      <!-- AI Chatbot -->
+      <div class="p-6 rounded-xl shadow-lg border border-[var(--border-color)] bg-opacity-5 backdrop-blur-lg">
+        <h3 class="text-2xl font-semibold mb-2">🤖 AI Chatbot</h3>
+        <p class="mb-4">Handle customer queries with natural, intelligent responses—boost support quality, reduce workload.</p>
+        <span class="inline-block bg-[var(--button-bg)] text-[var(--button-text)] px-4 py-2 rounded font-bold text-sm">24/7 Automation</span>
+      </div>
+
+      <!-- Trading Bot -->
+      <div class="p-6 rounded-xl shadow-lg border border-[var(--border-color)] bg-opacity-5 backdrop-blur-lg">
+        <h3 class="text-2xl font-semibold mb-2">📈 Trading Bot</h3>
+        <p class="mb-4">Automated trading across exchanges. Smart algorithms, real-time analysis, zero emotions, consistent execution.</p>
+        <span class="inline-block bg-[var(--button-bg)] text-[var(--button-text)] px-4 py-2 rounded font-bold text-sm">Real-time Profits</span>
+      </div>
+
+      <!-- Business Automation Bot -->
+      <div class="p-6 rounded-xl shadow-lg border border-[var(--border-color)] bg-opacity-5 backdrop-blur-lg">
+        <h3 class="text-2xl font-semibold mb-2">⚙️ Business Automation Bot</h3>
+        <p class="mb-4">Automate daily workflows — from CRM to lead nurturing to reporting — for faster, smarter business ops.</p>
+        <span class="inline-block bg-[var(--button-bg)] text-[var(--button-text)] px-4 py-2 rounded font-bold text-sm">Workflow Mastery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="pricing" class="py-20 px-6 bg-[var(--bg-color)] text-[var(--text-color)]">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 neon-text">Flexible Plans for Every Stage</h2>
+    <p class="mb-12 text-lg md:text-xl">Whether you're starting small or scaling big, Botwala has the perfect plan to power your automation journey.</p>
+
+    <div class="grid gap-10 md:grid-cols-3">
+      <!-- Startup Plan -->
+      <div class="p-8 rounded-2xl shadow-xl border border-[var(--border-color)] bg-opacity-5 backdrop-blur-lg transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-4">🚀 Startup</h3>
+        <p class="text-lg mb-6">Perfect for individuals & small teams just getting started.</p>
+        <div class="text-4xl font-bold mb-6">$8<span class="text-sm font-normal">/month</span></div>
+        <ul class="mb-6 space-y-2 text-left">
+          <li>✅ 5000 Contacts</li>
+          <li>✅ 50 Campaigns Per Month</li>
+          <li>✅ 10 Bot Replies</li>
+          <li>✅ 10 Bot Flows</li>
+          <li>✅ 100 Contacts Custom Fields</li>
+          <li>✅ 10 Team Members/Agents</li>
+          <li>✅ Ai Chat Bot</li>
+          <li>✅ Meta-Verified WhatsApp API Access</li>
+          <li>✅ Send Bulk Messages</li>
+          <li>✅ Life time  Support</li>
+          </ul>
+            <a href="https://razorpay.me/@decentra" target="_blank" class="glow-button block text-center px-6 py-3 rounded font-semibold">Upgrade Now</a>
+      </div>
+
+      <!-- Stable Plan -->
+      <div class="p-8 rounded-2xl shadow-xl border-2 border-[var(--button-bg)] bg-opacity-5 backdrop-blur-lg transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-4">📈 Stable</h3>
+        <p class="text-lg mb-6">For growing businesses needing more control and support.</p>
+        <div class="text-4xl font-bold mb-6">$20<span class="text-sm font-normal">/month</span></div>
+        <ul class="mb-6 space-y-2 text-left">
+          <li>✅ Unlimited Contacts</li>
+          <li>✅ Unlimited Campaigns Per Month</li>
+          <li>✅ Unlimited Bot Replies</li>
+          <li>✅ Unlimited Bot Flows</li>
+          <li>✅ 100 Contacts Custom Fields</li>
+          <li>✅ Unlimited Team Members/Agents</li>
+          <li>✅ Ai Chat Bot</li>
+          <li>✅ Meta-Verified WhatsApp API Access</li>
+          <li>✅ Send Bulk Messages</li>
+          <li>✅ Priority Support</li>
+        </ul>
+        <a href="https://razorpay.me/@decentra" target="_blank" class="glow-button block text-center px-6 py-3 rounded font-semibold">Upgrade Now</a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="p-8 rounded-2xl shadow-xl border border-[var(--border-color)] bg-opacity-5 backdrop-blur-lg transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-4">🏢 Enterprise</h3>
+        <p class="text-lg mb-6">Your brand. Your rules. Full white-label automation suite.</p>
+        <div class="text-4xl font-bold mb-6">Custom</div>
+        <ul class="mb-6 space-y-2 text-left">
+          <li>✅ Everything in Stable Plan</li>
+          <li>✅ White-Label Branding</li>
+          <li>✅ Resell Botwala Services</li>
+          <li>✅ Dedicated Engineer</li>
+        </ul>
+        <a href="#contact" class="glow-button block text-center px-6 py-3 rounded font-semibold">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="blog" class="py-20 px-6 bg-[var(--bg-color)] text-[var(--text-color)]">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 neon-text">Insights & Updates</h2>
+    <p class="mb-12 text-lg md:text-xl">Explore automation, marketing, AI trends, and more from Botwala experts.</p>
+
+    <!-- Tags/Category Filter -->
+    <div id="tag-filters" class="flex justify-center flex-wrap gap-4 mb-10">
+      <button class="tag-btn glow-button px-4 py-2 rounded-full text-sm font-semibold" data-tag="all">All</button>
+      <button class="tag-btn glow-button px-4 py-2 rounded-full text-sm font-semibold" data-tag="whatsapp">WhatsApp Bots</button>
+      <button class="tag-btn glow-button px-4 py-2 rounded-full text-sm font-semibold" data-tag="ai">AI Bots</button>
+      <button class="tag-btn glow-button px-4 py-2 rounded-full text-sm font-semibold" data-tag="automation">Automation</button>
+      <button class="tag-btn glow-button px-4 py-2 rounded-full text-sm font-semibold" data-tag="trading">Trading Bots</button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div id="blog-container" class="grid md:grid-cols-3 gap-10 text-left">
+      <!-- Dynamic blog posts will be injected here -->
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="flex justify-center mt-12 space-x-4">
+      <button id="prevPage" class="glow-button px-4 py-2 rounded">← Prev</button>
+      <button id="nextPage" class="glow-button px-4 py-2 rounded">Next →</button>
+    </div>
+
+    <!-- View All -->
+    <div class="mt-10">
+      <a href="/blogs" class="glow-button px-6 py-3 rounded text-lg font-semibold">View All Blogs</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="py-20 px-6 bg-[var(--bg-color)] text-[var(--text-color)]">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-30 xl:gap-60 items-start">
+
+    
+    <!-- Contact Form -->
+    <div>
+      <h2 class="text-3xl font-bold mb-8 neon-text">Get in Touch</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded bg-transparent border border-current focus:outline-none focus:ring-2 focus:ring-[var(--button-bg)] transition">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded bg-transparent border border-current focus:outline-none focus:ring-2 focus:ring-[var(--button-bg)] transition">
+        <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-2 rounded bg-transparent border border-current focus:outline-none focus:ring-2 focus:ring-[var(--button-bg)] transition"></textarea>
+        <div class="flex justify-end">
+          <button type="submit" class="glow-button px-6 py-2 rounded font-semibold">Send Message</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="space-y-10">
+      <!-- WhatsApp -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">WhatsApp Support</h3>
+        <a href="https://wa.me/917292011365" target="_blank" class="inline-block glow-button px-5 py-2 rounded">Chat on WhatsApp</a>
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Company Address</h3>
+        <p>Decentra Innovation Lab</p>
+        <p>55, 2nd Floor, Lane 2, Saidulajaib, </p>
+        <p>Near Saket Metro - Gate No. 2,</p> 
+        <p>Saket, New Delhi, 110030, India</p>
+      </div>
+
+      <!-- Social Icons -->
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Follow Us</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://www.facebook.com/botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-facebook"></i>
+</a>
+<a href="https://twitter.com/botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.youtube.com/@botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.instagram.com/botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-instagram"></i>
+</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-[var(--bg-color)] text-[var(--text-color)] pt-16 pb-8 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t border-[var(--button-bg)] pt-12">
+
+    <!-- Brand Info -->
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+
+  
+        <img src="/images/botwala-dark-logo.png" alt="botwala Dark Logo" class="h-8 logo-dark">
+        <img src="/images/botwala-light-logo.png" alt="botwala Light Logo" class="h-8 logo-light">
+
+      </div>
+      <p class="text-sm leading-relaxed">Bots. Business. Benefits.<br />Powering marketing, trading, and automation through AI and verified Meta APIs.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-[var(--button-bg)]">Home</a></li>
+        <li><a href="#services" class="hover:text-[var(--button-bg)]">Services</a></li>
+        <li><a href="#pricing" class="hover:text-[var(--button-bg)]">Pricing</a></li>
+        <li><a href="#blog" class="hover:text-[var(--button-bg)]">Blog</a></li>
+        <li><a href="#contact" class="hover:text-[var(--button-bg)]">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Useful Info -->
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Useful Info</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:text-[var(--button-bg)]">FAQs</a></li>
+        <li><a href="#" class="hover:text-[var(--button-bg)]">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-[var(--button-bg)]">Terms of Use</a></li>
+        <li><a href="#" class="hover:text-[var(--button-bg)]">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social -->
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Connect with Us</h4>
+      <p class="text-sm mb-2">📍 55, 2nd Floor, Lane 2, Saidulajaib,</p> 
+      <p>Near Saket Metro - Gate No. 2,</p> 
+      <p>New Delhi, 110030, India</p>
+      <p class="text-sm mb-4">📧 postman@wabb.botwala.in</p>
+      <a href="https://wa.me/917292011365" target="_blank" class="inline-block mb-4 glow-button px-4 py-1 rounded text-sm">WhatsApp Chat</a>
+      <div class="flex gap-4 text-xl">
+      <a href="https://www.facebook.com/botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-facebook"></i>
+</a>
+<a href="https://twitter.com/botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.youtube.com/@botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.instagram.com/botwalaofficial" target="_blank" class="hover:text-[var(--button-bg)]">
+  <i class="fab fa-instagram"></i>
+</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="mt-12 pt-6 border-t border-[var(--button-bg)] text-center text-sm text-gray-500 dark:text-gray-400">
+    <p>© 2025 Botwala. All rights reserved. Powered by <span class="text-[var(--button-bg)] font-semibold">Decentra Innovation Lab</span>.</p>
+  </div>
+</footer>
+
+
+<!-- Scroll to Top Triangle Button -->
+<button id="scrollTopBtn"
+  class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 hidden triangle-button"
+  aria-label="Scroll to Top">
+</button>
+<!-- Floating WhatsApp Chat Button with Tooltip -->
+<div class="fixed bottom-6 right-6 z-50 group">
+  <a href="https://wa.me/917292011365" target="_blank" aria-label="Chat on WhatsApp"
+     class="glow-whatsapp-btn flex items-center justify-center rounded-full w-14 h-14">
+    <i class="fab fa-whatsapp text-white text-2xl"></i>
+  </a>
+  <!-- Tooltip -->
+  <div class="tooltip-text absolute bottom-full mb-2 right-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity px-3 py-1 rounded shadow text-xs font-medium">
+    Chat on WhatsApp
+  </div>
+</div>
+
+
+  <script>
+// Theme Toggle Logic
+const toggleBtn = document.getElementById('themeToggle');
+const htmlTag = document.documentElement;
+
+if (localStorage.getItem('theme')) {
+  htmlTag.setAttribute('data-theme', localStorage.getItem('theme'));
+}
+
+toggleBtn.addEventListener('click', () => {
+  const currentTheme = htmlTag.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  htmlTag.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
+// Blog Pagination Logic (Works Perfectly)
+const blogs = [/* your blog objects... */];
+let currentPage = 1;
+const postsPerPage = 3;
+
+function renderBlogs(tag = "all") {
+  const filteredBlogs = tag === "all" ? blogs : blogs.filter(b => b.tag === tag);
+  const start = (currentPage - 1) * postsPerPage;
+  const end = start + postsPerPage;
+  const paginatedBlogs = filteredBlogs.slice(start, end);
+
+  const blogContainer = document.getElementById("blog-container");
+  blogContainer.innerHTML = paginatedBlogs.map(blog => `
+    <article class="rounded-xl border border-[var(--border-color)] shadow-xl p-6 backdrop-blur-lg bg-opacity-10 transition-transform transform hover:scale-105">
+      <img src="${blog.image}" alt="${blog.title}" class="rounded-md mb-4">
+      <h3 class="text-2xl font-semibold mb-2">${blog.title}</h3>
+      <p class="text-sm mb-4">${blog.excerpt}</p>
+      <a href="${blog.link}" class="text-[var(--button-bg)] font-bold hover:underline">Read More →</a>
+    </article>
+  `).join("");
+}
+
+document.querySelectorAll('.tag-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    currentPage = 1;
+    renderBlogs(btn.dataset.tag);
+  });
+});
+
+document.getElementById("prevPage").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    renderBlogs(document.querySelector(".tag-btn.active")?.dataset.tag || "all");
+  }
+});
+
+document.getElementById("nextPage").addEventListener("click", () => {
+  currentPage++;
+  renderBlogs(document.querySelector(".tag-btn.active")?.dataset.tag || "all");
+});
+
+renderBlogs();
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+  scrollTopBtn.classList.toggle("hidden", window.scrollY <= 200);
+});
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Mobile Menu Toggle and Auto-Close
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.toggle('-translate-x-full');
+  mobileMenu.classList.toggle('translate-x-0');
+});
+
+document.addEventListener('click', (e) => {
+  // Click outside mobileMenu
+  if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    mobileMenu.classList.add('-translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+  }
+});
+
+// Close on menu link click
+document.querySelectorAll('#mobileMenu .menu-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+  });
+});
+/*********/
+
+  </script>
+  
+  
+</body>
+</html>
