@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /api/
+Disallow: /console/
+Allow: /
+
+Sitemap: https://botwala.in/sitemap.xml
